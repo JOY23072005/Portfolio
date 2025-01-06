@@ -9,12 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for navigation links
-    const navtoggle=document.querySelector(".nav-links")
-    navtoggle.classList.toggle("active");
     const navLinks = document.querySelectorAll("nav a");
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
             link.addEventListener("click", (event) => {
+                
                 event.preventDefault();
                 const targetId = link.getAttribute("href").substring(1);
                 const targetSection = document.getElementById(targetId);
