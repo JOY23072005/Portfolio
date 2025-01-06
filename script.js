@@ -1,4 +1,8 @@
 // JavaScript for Portfolio Website
+function toggleNavbar() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for navigation links
