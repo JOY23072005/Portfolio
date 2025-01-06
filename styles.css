@@ -29,8 +29,7 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Navigation */
-/* Base Navbar Styles */
+/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,6 +37,8 @@ header p {
     padding: 1rem;
     background-color: #333;
     color: white;
+    position: relative; /* Make sure it's positioned above the sections */
+    z-index: 100;
 }
 
 .nav-links {
@@ -60,7 +61,7 @@ header p {
     cursor: pointer;
 }
 
-/* Responsive Styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -71,37 +72,20 @@ header p {
         right: 0;
         width: 100%;
         text-align: center;
+        z-index: 99; /* Ensures it appears on top of other sections */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Show links when active */
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show toggle button */
     }
 }
-
-nav {
-    background: #333;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1rem;
-}
-
-nav a:hover {
-    color: #4CAF50;
-}
-
 /* Section styles */
 section {
+    padding-top: 6rem;
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: auto;
