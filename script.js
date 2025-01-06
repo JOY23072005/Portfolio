@@ -1,9 +1,11 @@
-function toggleNavbar() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-        navLinks.classList.toggle('active');
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active"); // Toggles the `active` class
+    });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for navigation links
